@@ -4,33 +4,6 @@ Projeto de coleta da Parte 1 de **Tecnicas para Analise de Midias Sociais**.
 O script coleta **dados reais** somente depois de configurada uma chave pessoal
 da **YouTube Data API v3**. Nao ha comentarios ficticios neste projeto.
 
-## 1. Preparacao (Windows ou Ubuntu)
-
-1. Instale o **Python 3.10 ou superior**. Nao ha bibliotecas para instalar.
-2. Acesse https://console.cloud.google.com/ e crie/selecione um projeto.
-3. Em **APIs e servicos > Biblioteca**, habilite **YouTube Data API v3**.
-4. Em **APIs e servicos > Credenciais**, crie uma **chave de API** e, quando
-   possivel, restrinja-a a YouTube Data API v3. Mantenha-a privada.
-5. Abra o terminal na pasta `CCF427_IA_YouTube`.
-
-No **Ubuntu**, execute:
-
-```bash
-read -rs -p "Cole a chave da API: " YOUTUBE_API_KEY
-echo
-export YOUTUBE_API_KEY
-python3 coletar_youtube.py
-```
-
-No **PowerShell do Windows**, execute:
-
-```powershell
-$env:YOUTUBE_API_KEY = Read-Host "Cole a chave da API"
-py coletar_youtube.py
-```
-
-> Nao compartilhe sua chave, nao a envie para o GitHub e nao a inclua no
-> relatorio. A variavel e lida em memoria pelo script.
 
 ## 2. O que acontece ao executar?
 
@@ -93,22 +66,8 @@ Para conferir que o projeto funciona sem usar credito da API:
 python3 -m unittest discover -s tests -v
 ```
 
-## 5. Entrega da Parte 1
 
-Depois da execucao:
-
-1. Substitua `[PREENCHER NOME]` e `[INSERIR URL DO REPOSITORIO]` no
-   arquivo `dados/relatorio_parte1.md`.
-2. Confira os numeros e as limitacoes, especialmente se mudaram os filtros.
-3. Entregue documento, codigo do coletor e um link para o repositorio.
-4. Para gerar PDF sem instalar nada, cole o Markdown no Google Docs e exporte
-   como PDF (pode precisar ajustar a tabela para boa apresentacao).
-
-O enunciado do PDF anexado indica uma data de **2025**; confirme o prazo atual
-no Moodle. O codigo nao faz analise de sentimento nesta etapa (isso fica para
-as partes seguintes), nem transforma comentarios em um grafo.
-
-## 6. Metodo e cuidados cientificos
+## 5. Metodo e cuidados cientificos
 
 - A unidade de analise e o **comentario principal**, nao o usuario nem a resposta.
 - Busca de videos por relevancia; amostra dos **100 comentarios mais recentes**
