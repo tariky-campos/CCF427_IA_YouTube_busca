@@ -5,7 +5,7 @@ O script coleta **dados reais** somente depois de configurada uma chave pessoal
 da **YouTube Data API v3**. Nao ha comentarios ficticios neste projeto.
 
 
-## 2. O que acontece ao executar?
+## 1. O que acontece ao executar?
 
 O programa procura ate **4 videos para cada uma de 3 consultas** (maximo de 12),
 publicados a partir de 2024, com duracao de pelo menos 4 minutos e ao menos
@@ -32,7 +32,7 @@ dos comentarios nao sao armazenados. IDs de **comentarios e videos** sao
 mantidos para rastreabilidade. Um apostrofo e acrescentado aos textos que
 comecam com caracteres perigosos para planilhas (=, +, - ou @).
 
-## 3. Se a coleta falhar
+## 2. Se a coleta falhar
 
 - **Falta YOUTUBE_API_KEY**: volte ao passo 1.
 - **API key not valid / accessNotConfigured**: confira a chave e se ativou a API.
@@ -53,7 +53,7 @@ Para um teste pequeno que consuma menos quota:
 python3 coletar_youtube.py --videos-por-tema 1 --comentarios-por-video 10 --output dados_teste
 ```
 
-## 4. Validacao dos dados
+## 3. Validacao dos dados
 
 Confira o numero real mostrado no terminal e no `resumo_coleta.json`. Abra
 `videos.csv` e teste alguns URLs. Verifique que `comentarios.csv` possui os
@@ -67,7 +67,7 @@ python3 -m unittest discover -s tests -v
 ```
 
 
-## 5. Metodo e cuidados cientificos
+## 4. Metodo e cuidados cientificos
 
 - A unidade de analise e o **comentario principal**, nao o usuario nem a resposta.
 - Busca de videos por relevancia; amostra dos **100 comentarios mais recentes**
