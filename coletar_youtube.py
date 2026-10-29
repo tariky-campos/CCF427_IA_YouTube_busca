@@ -201,9 +201,9 @@ def write_report(directory: Path, videos: list[dict[str, Any]],
     body = f"""# CCF427 - Parte 1 - Coleta de Dados
 
 **Titulo:** Opinioes sobre inteligencia artificial na programacao em comentarios do YouTube  
-**Autor:** [PREENCHER NOME]  
+**Autor:** Tariky Rodrigues Campos  
 **Data da coleta (UTC):** {summary['coleta_utc']}  
-**Repositorio do codigo:** [INSERIR URL DO REPOSITORIO]
+**Repositorio do codigo:** https://github.com/tariky-campos/CCF427_IA_YouTube_busca.git
 
 ## 1. Objetivo e questao de pesquisa
 
@@ -279,7 +279,7 @@ O artigo final avaliara diferencas observadas entre os tres grupos.
 - YouTube API search.list: https://developers.google.com/youtube/v3/docs/search/list
 - YouTube API videos.list: https://developers.google.com/youtube/v3/docs/videos/list
 - YouTube API commentThreads.list: https://developers.google.com/youtube/v3/docs/commentThreads/list
-- CCF427 - Projeto Pratico da Disciplina (enunciado fornecido pelo docente).
+- CCF427 - Projeto Pratico da Disciplina.
 """
     (directory / "relatorio_parte1.md").write_text(body, encoding="utf-8")
 
